@@ -5,6 +5,8 @@ npm i mongodb
 npm i mongoose
 ```
 
+NB: In mongodb collection is database and inside collection there are several tables
+
 ### **Insert data in to MongoDB Atlas using mongoose**
 
 timestamps: true. automatically adds createdAt and updatedAt fields to records<br>
