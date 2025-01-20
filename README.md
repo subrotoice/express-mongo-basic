@@ -526,8 +526,63 @@ export {
 
 ```
 
-### **.**
+### **Vercel Deploy: CLI**
 
-```js
+packeg.json
 
+```json
+"scripts": {
+    "start": "node index.js"
+}
+```
+
+Install the Vercel CLI globally:
+
+```bash
+npm install -g vercel
+```
+
+Create vercel.json
+
+```json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ]
+}
+```
+
+1. vercel login
+
+```bash
+vercel login
+```
+
+2. Deploy Your Project: Inside your project directory, run:
+
+```bash
+vercel
+```
+
+3. For changes, re-deploy by simply running:
+
+```bash
+vercel --prod
+```
+
+Ensure Node.js and Vercel CLI are installed correctly by checking versions:
+
+```bash
+node -v
+vercel -v
 ```
